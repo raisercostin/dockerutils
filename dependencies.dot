@@ -1,0 +1,20 @@
+digraph G {
+  "dd-start" -> "dd-create"
+  "dd-restart" -> "dd-stop"
+  "dd-restart" -> "dd-start"
+  "dd-rebuild" -> "dd-image-rebuild"
+  "dd-image-rebuild" -> "dd-image-remove"
+  "dd-image-rebuild" -> "dd-image-build"
+  "dd-build" -> "dd-image-build"
+  "dd-image-remove" [color=red]
+  "dd-image-remove" -> "dd-remove"
+  "dd-remove" -> "dd-stop"
+  "dd-recreate" -> "dd-remove"
+  "dd-recreate" -> "dd-create"
+  "dd-create" -> "dd-image-build"
+  "dd-start-logs" [color=blue]
+  "dd-start-logs" -> "dd-start"
+  "dd-start-logs" -> "dd-logs"
+  "dd-restart-logs" -> "dd-restart"
+  "dd-restart-logs" -> "dd-logs"
+}
