@@ -3,7 +3,7 @@
 This is a set of utilities focused on the main scenarios when developing with docker.
 
 # How to use
-- edit `project.sh` with namve, version, ports
+- edit `project.sh` with name, version, ports
 - execute `source dockutils.sh` to activates the commands.
 - `dd-start-logs` - start (and build image, create container, start container, log everything alongside)
 - `dd-image-remove` - remove image (and stop container, destroy container, remove image to recreate it from scratch)
