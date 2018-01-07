@@ -1,12 +1,14 @@
 # Docker utils
 
-This is a set of utilities focused on the main scenarios when developing with docker:
+This is a set of utilities focused on the main scenarios when developing with docker.
 
-- start (and build image, create container, start container, log everything alongside)
-  `dd-start-logs`
+# How to use
+- edit `project.sh` with namve, version, ports
+- execute `source dockutils.sh` to activates the commands.
+- `dd-start-logs` - start (and build image, create container, start container, log everything alongside)
+- `dd-image-remove` - remove image (and stop container, destroy container, remove image to recreate it from scratch)
 
-- remove image (and stop container, destroy container, remove image to recreate it from scratch)
-  `dd-image-remove`
+# More about commands
 - there is a set of dependencies between them 
   ![](dependencies.png)
 - info
